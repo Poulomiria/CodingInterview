@@ -4,13 +4,14 @@ package Medium;
  */
 
 import java.util.ArrayList;
+import java.util.List;
 
 class NumberOfMatchingSubsequences {
-	
+	/*
 	public int numMatchingSubseqDifferent(String S, String[] words) {
 	    List<Integer[]>[] waiting = new List[128];
 	    for (int c = 0; c <= 'z'; c++)
-	        waiting[c] = new ArrayList();
+	        waiting[c] = new ArrayList<Object>();
 	    for (int i = 0; i < words.length; i++)
 	        waiting[words[i].charAt(0)].add(new Integer[]{i, 1});
 	    for (char c : S.toCharArray()) {
@@ -21,7 +22,7 @@ class NumberOfMatchingSubsequences {
 	    }
 	    return waiting[0].size();
 	}
-	
+	*/
     public int numMatchingSubseq(String S, String[] words) {
         int ans = 0;
         ArrayList<Node>[] heads = new ArrayList[26];
