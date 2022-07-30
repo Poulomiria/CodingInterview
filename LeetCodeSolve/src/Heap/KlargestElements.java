@@ -5,9 +5,10 @@ import java.util.PriorityQueue;
 
 class KlargestElements {
 
-	public static int[] findKSmallest(int[] arr,int k) {
+	public static int[] findKLargest(int[] arr,int k) {
 		
 		int[] result = new int[k];
+		//Min heap
 		PriorityQueue<Integer> pq = new PriorityQueue<Integer>((n1,n2) -> (n1-n2));
 		for(int nums : arr)
 		{
@@ -28,7 +29,7 @@ class KlargestElements {
 	{
 		int[] arr = {4,6,2,7,8,4,5};
 		int k = 3;
-		int[] result = findKSmallest(arr,k);
+		int[] result = findKLargest(arr,k);
 		for(int i = 0; i < k; i++)
 		{
 			System.out.println(result[i]);

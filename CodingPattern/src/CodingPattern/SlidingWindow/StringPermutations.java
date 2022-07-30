@@ -6,6 +6,7 @@ import java.util.*;
 class StringPermutation {
   public static boolean findPermutation(String str, String pattern) {
     int windowStart = 0, matched = 0;
+    //put all the character of the pattern in a hashmap
     Map<Character, Integer> charFrequencyMap = new HashMap<>();
     for (char chr : pattern.toCharArray())
       charFrequencyMap.put(chr, charFrequencyMap.getOrDefault(chr, 0) + 1);
