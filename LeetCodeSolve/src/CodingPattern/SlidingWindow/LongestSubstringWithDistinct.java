@@ -8,6 +8,7 @@ class LongestSubstringWithDistinct {
   public static int findLength(String str) {
     int windowStart = 0, maxLength = 0;
     Map<Character, Integer> charIndexMap = new HashMap<>();
+    
     // try to extend the range [windowStart, windowEnd]
     for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {
       char rightChar = str.charAt(windowEnd);

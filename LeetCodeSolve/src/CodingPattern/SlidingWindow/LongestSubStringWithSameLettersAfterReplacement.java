@@ -6,6 +6,7 @@ import java.util.*;
 class LongestSubStringWithSameLettersAfterReplacement {
   public static int findLength(String str, int k) {
     int windowStart = 0, maxLength = 0, maxRepeatLetterCount = 0;
+    
     Map<Character, Integer> letterFrequencyMap = new HashMap<>();
     // try to extend the range [windowStart, windowEnd]
     for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {

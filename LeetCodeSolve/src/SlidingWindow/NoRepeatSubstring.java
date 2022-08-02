@@ -1,4 +1,5 @@
-package SlidingWindow;}
+package SlidingWindow;
+
 import java.util.*;
 
 class NoRepeatSubstring {
