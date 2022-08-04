@@ -80,6 +80,7 @@ public class TheMaze2 {
 	        boolean[][] visited = new boolean[maze.length][maze[0].length];
 	        for (int[] row: distance)
 	            Arrays.fill(row, Integer.MAX_VALUE);
+	        
 	        distance[start[0]][start[1]] = 0;
 	        dijkstra(maze, distance, visited);
 	        return distance[dest[0]][dest[1]] == Integer.MAX_VALUE ? -1 : distance[dest[0]][dest[1]];

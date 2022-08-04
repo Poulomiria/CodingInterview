@@ -17,11 +17,11 @@ public class LowestCommonAncestors {
 		//base case
 	    if (root == null || root == p || root == q) return root;
 	    
-	    //Induction
 	    
+	    //Hypotheses
 	    TreeNode left = lowestCommonAncestor(root.left, p, q);
 	    TreeNode right = lowestCommonAncestor(root.right, p, q);
-	    
+	  //Induction
 	    if(left == null)
 	    	return right;
 	    else if(right == null)
