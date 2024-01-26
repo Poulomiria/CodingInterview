@@ -2,8 +2,6 @@ package LinkedList;
 
 public class ReverseLinkedList {
 	
-	
-	
 	public static Node reverse(Node head)
 	{
 		Node current = null;

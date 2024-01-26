@@ -9,6 +9,34 @@ public class LinkedList {
             head = head.next;
         }
     }
+    static int lengthLL(Node head)
+    {
+        if(head == null) return;
+        Node current = head;
+        int count =0;
+        while(current != null)
+        {
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+    int getMiddle(Node head)
+    {
+        // Your code here.
+        if(head == null)
+            return 0;
+        Node fast = head;
+        Node slow = head;
+        Node curr = head;
+        while(fast != null && fast.next != null)
+        {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        int result = slow.data;
+        return result;
+    }
     public static void main(String[] args)
     {
         Node head = new Node(7);
@@ -28,6 +56,7 @@ public class LinkedList {
         head = reverse(head);
         System.out.print("\nReversed Linked List is: \n");
         printList(head);
+        lengthLL(head);
     }
 
 }
