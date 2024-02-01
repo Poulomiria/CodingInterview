@@ -37,6 +37,25 @@ public class LinkedList {
         int result = slow.data;
         return result;
     }
+    boolean isCircular(Node head)
+    {
+        //Alternative is fast and slow pointerß
+        // An empty linked list is circular
+        if (head == null)
+            return true;
+
+        // Next of head
+        Node node = head.next;
+
+        // This loop would stop in both cases (1) If
+        // Circular (2) Not circular
+        while (node != null && node != head)
+            node = node.next;
+
+        // If loop stopped because of circular
+        // condition
+        return (node == head);
+    }
     public static void main(String[] args)
     {
         Node head = new Node(7);
