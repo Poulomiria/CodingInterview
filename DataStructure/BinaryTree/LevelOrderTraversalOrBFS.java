@@ -35,5 +35,24 @@ public class LevelOrderTraversalOrBFS {
 		
 		return ans;
 	}
+	static ArrayList <Integer> levelOrder(Node node)
+	{
+		ArrayList<Integer> aList = new ArrayList<Integer>();
+		Queue<Node> q = new LinkedList<Node>();
+		q.offer(node);
+		while(!q.isEmpty())
+		{
+			Node n = q.poll();
+			if(n != null)
+			{
+				aList.add(n.data);
+				q.offer(n.left);
+				q.offer(n.right);
+			}
+
+		}
+		return aList;
+
+	}
 
 }
