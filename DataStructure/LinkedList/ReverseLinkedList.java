@@ -19,7 +19,19 @@ public class ReverseLinkedList {
 		return prev;
 		
 	}
-
-			
-
+	public static Node reverseDLL(Node head)
+	{
+		Node current = null;
+		Node prev = null;
+		Node next = null;
+		current = head;
+		while(current != null)
+		{
+			prev = current.prev;
+			current.prev = current.next;
+			current.next = prev;
+			current = current.prev;
+		}
+		return prev.prev;
+	}
 }
